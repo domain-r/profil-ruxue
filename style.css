@@ -8,7 +8,7 @@
 body {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    linear-gradient(rgba(0,0,0,0.32), rgba(0,0,0,0.32)),
     url("bg.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
@@ -16,74 +16,131 @@ body {
   color: #fff;
 }
 
+/* WRAPPER UTAMA */
 .overlay {
-  width: 94%;
-  max-width: 520px; /* DIGEDEIN */
-  padding: 40px 28px; /* NAPAS */
-  border: 2px solid rgba(255,255,255,0.6);
-  background: rgba(0,0,0,0.28);
+  position: relative;
+  width: 95%;
+  max-width: 560px;
+  padding: 48px 32px;
   text-align: center;
-  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(8px);
+  border-radius: 28px;
+  overflow: hidden;
 }
 
-.avatar {
-  width: 150px; /* DIGEDEIN */
-  height: 150px;
+/* FRAME ELIPS + GLOW */
+.overlay::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
   border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.75);
-  object-fit: cover;
-  margin-bottom: 18px;
+  border: 1.5px solid rgba(255,255,255,0.45);
+  pointer-events: none;
 }
 
+.overlay::after {
+  content: "";
+  position: absolute;
+  inset: -70px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(200,150,255,0.45),
+    rgba(140,90,255,0.2),
+    transparent 70%
+  );
+  filter: blur(55px);
+  z-index: -1;
+  animation: pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.85; }
+  100% { opacity: 0.4; }
+}
+
+/* AVATAR */
+.avatar {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 22px;
+  border: 3px solid rgba(255,255,255,0.75);
+  box-shadow:
+    0 0 22px rgba(255,200,255,0.55),
+    0 0 55px rgba(160,120,255,0.35);
+}
+
+/* NAMA */
 .name {
   font-weight: 600;
-  font-size: 22px; /* DIGEDEIN */
-  margin-bottom: 28px;
-  letter-spacing: 1px;
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+  text-shadow:
+    0 0 10px rgba(255,200,255,0.7),
+    0 0 22px rgba(180,120,255,0.4);
 }
 
+/* LINK LIST */
 .links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 28px;
+  gap: 18px;
+  margin-bottom: 32px;
 }
 
 .link {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 14px 18px; /* TOMBOL GEDE */
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.45);
+  gap: 14px;
+  padding: 16px 20px;
+  font-size: 16px;
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
+  background: rgba(255,255,255,0.14);
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.45);
+  transition: all 0.3s ease;
 }
 
 .link img {
-  width: 26px; /* ICON GEDE */
-  height: 26px;
+  width: 28px;
+  height: 28px;
 }
 
+.link:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.2);
+  box-shadow: 0 8px 28px rgba(180,120,255,0.45);
+}
+
+/* DONATE */
 .donate {
-  margin: 25px 0;
-  padding: 14px 32px;
+  margin: 28px 0;
+  padding: 15px 36px;
   font-size: 16px;
-  background: #f1a7a0;
+  background: linear-gradient(135deg, #f1a7a0, #c38cff);
   border: none;
-  border-radius: 8px;
+  border-radius: 30px;
+  color: #000;
   cursor: pointer;
+  box-shadow: 0 0 25px rgba(200,150,255,0.55);
 }
 
+/* INFO */
 .info {
   font-size: 15px;
   opacity: 0.85;
-  margin-bottom: 24px;
   line-height: 1.6;
+  margin-bottom: 26px;
 }
 
+/* FOOTER */
 footer {
   font-size: 13px;
   opacity: 0.6;
