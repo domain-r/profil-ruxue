@@ -3,22 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Xue'er</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Profile | Ruxuen</title>
+
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: 
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("bg.jpg") center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 420px;
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 30px 20px;
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(6px);
+      text-align: center;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,0.7);
+      margin-bottom: 15px;
+    }
+
+    .name {
+      font-size: 22px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      color: #e6c6ff;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 25px;
+    }
+
+    .links a {
+      color: #fff;
+      font-size: 20px;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.6);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .links a:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    .donate {
+      margin-bottom: 20px;
+    }
+
+    .donate button {
+      padding: 8px 22px;
+      border: none;
+      border-radius: 6px;
+      background: #d9a7ff;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .text {
+      font-size: 13px;
+      line-height: 1.6;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      font-size: 11px;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
-  <div class="profile-container">
-    <div class="background"></div>
-    <div class="profile-content">
-      <img src="profile.png" alt="Profil" class="profile-pic">
-      <h1 class="profile-name">✧★ Ruxuen ★✧</h1>
-      <div class="social-links">
-        <a href="https://instagram.com/" target="_blank">Instagram</a>
-        <a href="https://twitter.com/" target="_blank">Twitter</a>
-        <a href="https://tiktok.com/" target="_blank">TikTok</a>
-        <a href="https://github.com/" target="_blank">GitHub</a>
-      </div>
+
+  <div class="card">
+
+    <!-- FOTO PROFIL -->
+    <img src="profile.jpg" class="avatar">
+
+    <!-- NAMA -->
+    <div class="name">✦✧ R U X U E N ✧✦</div>
+
+    <!-- LINK SOSMED -->
+    <div class="links">
+      <a href="https://tiktok.com/@username" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      <a href="https://wa.me/628xxxxxxxxxx" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://instagram.com/username" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/username" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
     </div>
+
+    <!-- DONASI -->
+    <div class="donate">
+      <button>donasi</button>
+    </div>
+
+    <!-- TEKS -->
+    <div class="text">
+      Pemberitahuan<br>
+      isi<br>
+      isi<br>
+      isi<br>
+      isi
+    </div>
+
+    <footer>
+      powered by ruxue<br>
+      since — isisisi
+    </footer>
+
   </div>
+
 </body>
 </html>
