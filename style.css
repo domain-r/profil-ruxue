@@ -145,11 +145,20 @@ body {
   justify-content: center;
 }
 
-.saweria-core img {
-  width: 48px;
-  height: 48px;
+.saweria-float {
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  width: 64px;
+  height: 64px;
+  z-index: 9999;
+}
+
+.saweria-float img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.4));
 }
 
 /* HOVER RESPONSE */
