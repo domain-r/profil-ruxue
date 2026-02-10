@@ -122,63 +122,46 @@ body {
   box-shadow: 0 8px 28px rgba(180,120,255,0.45);
 }
 
-/* ===============================
-   SAWERIA FLOAT — CLEAN FINAL
-================================ */
-
-.saweria-float {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  width: 64px;
-  height: 64px;
-  z-index: 9999;
-}
-
-.saweria-core {
+/* === SAWERIA DONATION BUTTON FINAL === */
+.saweria-btn {
+  display: block;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
+  max-width: 280px;
+  margin: 20px auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 14px 0;
+  text-align: center;
 
-  background: rgba(10,10,14,0.85);
-  border: 1.5px solid rgba(255,255,255,0.45);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-decoration: none;
 
-  animation: saweriaFloat 4.5s ease-in-out infinite;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+
+  backdrop-filter: blur(6px);
+
+  transition: 
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease;
 }
 
-/* TEXT / ICON */
-.saweria-core span {
-  font-size: 11px;
-  letter-spacing: 1.4px;
-  color: #fff;
-  pointer-events: none;
+/* hover effect, glow ringan aja */
+.saweria-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
 }
 
-/* RING HALUS */
-.saweria-core::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.25);
-}
-
-/* HOVER */
-.saweria-core:hover {
-  transform: scale(1.08);
-  border-color: rgba(180,120,255,0.85);
-}
-
-/* FLOAT ANIM */
-@keyframes saweriaFloat {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-8px); }
-  100% { transform: translateY(0); }
+/* klik */
+.saweria-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.25);
 }
 
 /* INFO */
