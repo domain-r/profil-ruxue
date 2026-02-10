@@ -8,7 +8,7 @@
 body {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
     url("bg.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
@@ -17,67 +17,74 @@ body {
 }
 
 .overlay {
-  width: 90%;
-  max-width: 420px;
-  padding: 30px 20px;
+  width: 94%;
+  max-width: 520px; /* DIGEDEIN */
+  padding: 40px 28px; /* NAPAS */
   border: 2px solid rgba(255,255,255,0.6);
-  background: rgba(0,0,0,0.25);
+  background: rgba(0,0,0,0.28);
   text-align: center;
+  backdrop-filter: blur(6px);
 }
 
 .avatar {
-  width: 120px;
-  height: 120px;
+  width: 150px; /* DIGEDEIN */
+  height: 150px;
   border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.7);
+  border: 3px solid rgba(255,255,255,0.75);
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
 }
 
 .name {
   font-weight: 600;
-  margin-bottom: 25px;
+  font-size: 22px; /* DIGEDEIN */
+  margin-bottom: 28px;
+  letter-spacing: 1px;
 }
 
 .links {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 16px;
+  margin-bottom: 28px;
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 15px;
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.4);
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 18px; /* TOMBOL GEDE */
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.45);
   color: #fff;
   text-decoration: none;
+  font-size: 16px;
 }
 
 .link img {
-  width: 22px;
-  height: 22px;
+  width: 26px; /* ICON GEDE */
+  height: 26px;
 }
 
 .donate {
-  margin: 20px 0;
-  padding: 10px 25px;
+  margin: 25px 0;
+  padding: 14px 32px;
+  font-size: 16px;
   background: #f1a7a0;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
 .info {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 20px;
+  font-size: 15px;
+  opacity: 0.85;
+  margin-bottom: 24px;
+  line-height: 1.6;
 }
 
 footer {
-  font-size: 12px;
+  font-size: 13px;
   opacity: 0.6;
 }
